@@ -1,5 +1,17 @@
 # motherbrain
 The main Node JS server for reedyhighschool.com
 
+## Prerequisites
+ * NodeJS (https://nodejs.org/en/)
 
-Yeah this will soon be something cool
+## Installation
+
+```
+$ npm install
+```
+
+## Starting server
+
+```
+$ npm start
+```
