@@ -2,10 +2,29 @@
 var express = require('express');
 var app = express();
 
+//Templating engine: EJS
+//Documentation: https://github.com/tj/ejs
+app.set('view engine', 'ejs')
+
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+	// host is the incoming url
+	// changes depending on subdomain
+	// ex) cs.reedyhighschool.com  or  deca.reedyhighschool.com
+
+	var host = req.headers.host;
+	switch(host){
+	    case "reedyhighschool.com":
+			res.render("index")
+			break;
+		case "reedyhighschool.com":
+			res.render("index")
+			break;
+	    default:
+	    	res.render("clubnotfound", {"host":host});
+	    	break;
+	}
 });
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!\nType http://localhost:8080/ in your web browser to see the Hello World page.');
+app.listen(10001, function () {
+	console.log('Example app listening on port 10001!\nType http://localhost:10001/ in your web browser to see the Hello World page.');
 });
