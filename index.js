@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
 	    case "reedyhighschool.com":
 			res.render("index")
 			break;
-		case "reedyhighschool.com":
+		case "www.reedyhighschool.com":
 			res.render("index")
 			break;
 	    default:
